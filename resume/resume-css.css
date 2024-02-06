@@ -1,0 +1,109 @@
+html,
+body {
+    margin: 0px;
+    padding: 10px;
+}
+
+.box {
+    margin: 0px auto;
+    /*将div盒子居中*/
+    width: 595px;
+    height: 842px;
+    background-color: blue;
+}
+
+/*左侧内容*/
+.left-box {
+    background-color: #D9DADE;
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+
+.me-img {
+    /*background-color: blue;*/
+    text-align: center;
+    margin-left: 20%;
+    width: 60%;
+    height: 40%;
+}
+
+.me-img img {
+    margin-top: 120px;
+    width: 110px;
+    height: 170px;
+}
+
+.basic-information {
+    /*background-color: blue;*/
+    margin-left: 30px;
+}
+
+.honor-award {
+    /*荣誉奖励*/
+    /*background-color: blue;*/
+    margin: 0px auto;
+    margin-left: 30px;
+    width: 80%;
+}
+
+.honor-award table {
+    margin-left: 30px;
+}
+
+/*右侧内容*/
+.right-box {
+    background-color: #F0F0F0;
+    width: 67%;
+    height: 100%;
+    float: right;
+}
+
+.self-assessment {
+    background-color: rgb(167, 234, 239);
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.self-assessment p {
+    font-size: 10px;
+    margin-left: 30px;
+}
+
+.professional-skills {
+    background-color: rgb(175, 200, 237);
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.professional-skills ol {
+    background-color: rgb(134, 216, 222);
+    /* margin-left:10px;*/
+    font-size: 12px;
+}
+
+.project-practice {
+    background-color: rgb(247, 213, 182);
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.project-practice ol {
+    /*background-color: rgb(192, 168, 232);*/
+    font-size: 12px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    /* 调整 h4 标题下方的外边距 */
+}
+
+h5 {
+    margin-top: 10px;
+    /* 调整 h5 标题上方的外边距 */
+}
+
+ol {
+    margin-bottom: 10px;
+    /* 调整 ol 下方的外边距 */
+}
