@@ -102,6 +102,7 @@ h4 {
 
 h5 {
     margin-top: 1px !important;
+    margin-bottom: 1px !important;
     /* 调整 h5 标题上方的外边距 */
 }
 
@@ -109,6 +110,12 @@ ol {
     margin-top: 1px !important;
     margin-bottom: 1px !important;
     /* 调整 ol 下方的外边距 */
+}
+
+li {
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
+    /* 调整 li 下方的外边距 */
 }
 
 p {
