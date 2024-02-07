@@ -1,7 +1,9 @@
 html,
 body {
-    margin: 0px;
-    padding: 10px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
 }
 
 .box {
@@ -94,16 +96,26 @@ body {
 }
 
 h4 {
-    margin-bottom: 10px;
+    margin-bottom: 1px !important;
     /* 调整 h4 标题下方的外边距 */
 }
 
 h5 {
-    margin-top: 10px;
+    margin-top: 1px !important;
     /* 调整 h5 标题上方的外边距 */
 }
 
 ol {
-    margin-bottom: 10px;
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
     /* 调整 ol 下方的外边距 */
+}
+
+p {
+    margin-top: 1px;
+    /* 调整正文上方的外边距 */
+}
+
+english {
+    font-family: 'Times New Roman', Times, serif;
 }
