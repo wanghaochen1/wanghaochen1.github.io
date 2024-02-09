@@ -6,8 +6,8 @@ on:
       branches: [ gh-pages ]
     pull_request:
       branches: [ gh-pages ]
-  
-  jobs:
+      
+jobs:
     build:
       runs-on: ubuntu-latest
       steps:
