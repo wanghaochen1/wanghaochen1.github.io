@@ -6,8 +6,8 @@ on:
       branches: [ gh-pages ]
     pull_request:
       branches: [ gh-pages ]
-      
-jobs:
+  
+  jobs:
     build:
       runs-on: ubuntu-latest
       steps:
@@ -15,7 +15,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
         with:
-          node-version: 20
+          fetch-depth: 0
       # setup nodejs
       - name: Use Node.js
         uses: actions/setup-node@v4
