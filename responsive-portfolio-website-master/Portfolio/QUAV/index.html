@@ -32,25 +32,19 @@
                     <li class="nav__item">
                         <a href="#home" class="nav__link">
                             <i class="uil uil-estate nav__icon"></i>
-                            <p i18n="home">Home</p>
+                            <p i18n="home">QUAV姿态论文</p>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#about" class="nav__link">
                             <i class="uil uil-user nav__icon"></i>
-                            <p i18n="about">About</p>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i>
-                            <p i18n="portfolio">Portfolio</p>
+                            <p i18n="about">文章简介</p>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
                             <i class="uil uil-message nav__icon"></i>
-                            <p i18n="contact">Contactme</p>
+                            <p i18n="contact">Time Line</p>
                         </a>
                     </li>
                     <li class="nav__item">
@@ -90,35 +84,25 @@
                     <div class="home__img">
                         <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                                <image class="home__blob-img" x="0" y="-30" xlink:href="assets/img/me.JPG" />
-                            </g>
+                            <rect width="400" height="400" fill="url(#pattern)" />
+                            <defs>
+                                <pattern id="pattern" patternUnits="userSpaceOnUse" width="200" height="187">
+                                    <image class="home__blob-img" x="0" y="20" xlink:href="assets/img/me.png"
+                                        width="200" height="187" />
+                                </pattern>
+                            </defs>
                         </svg>
                     </div>
 
                     <div class="home__data">
                         <h1 class="home__title" i18n="home__title">
-                            Hi, 我是王昊宸
+                            QUAV姿态论文
                         </h1>
                         <h3 class="home__subtitle" i18n="home__subtitle">
-                            来自北京理工大学未来精工技术学院-智能通信感知方向
+                            发表于Aerospace Science and Technology
                         </h3>
                         <p class="home__description" i18n="home__description">
-                            专业综合排名 <strong> 2/29 </strong><br> 中科院1区TOP 发表共同一作论文 <strong> 1 </strong> 篇 <br>国家发明专利
-                            <strong> 2 </strong> 项
-                            <br>主持国家级大创项目 <strong> 1 </strong> 项
-                            <br>中国电信<strong>优秀</strong>实习生
-                            <br>北京理工大学重点科研团队<strong>负责人</strong>
+                            本问针对无人机姿态控制问题，提出了一种具有指定时间规定性能函数的四旋翼无人机自适应事件触发量化姿态控制。降低通信压力的同时保证姿态跟踪性能。
                         </p>
                         <a href="#contact" class="button button-flex">
                             <span i18n="home__contact">Contact Me</span>
@@ -138,40 +122,41 @@
 
         <!--==================== ABOUT ====================-->
         <section class="about section" id="about">
-            <h2 class="section__title" i18n="about__title">About Me</h2>
-            <span class="section__subtitle" i18n="about__subtitle">My introduction</span>
+            <h2 class="section__title" i18n="about__title">文章简介</h2>
+            <span class="section__subtitle" i18n="about__subtitle">Introduction</span>
             <div class="about__container container grid">
-                <img src="assets/img/about.jpg" alt="" class="about__img" />
+                <img src="imgs/Data1.png" alt="" class="about__img" />
 
                 <div class="about__data">
                     <p class="about__description" i18n="about__description">
-                        我刻苦钻研，认真学习，在北京理工大学的精英班取得了综合成绩排名 <strong>2/29</strong>
-                        。在刻苦学习的同时，我也用实际行动践行学校要求的学科交叉融合。刚刚新大二的我就代表学校参加了机械工程创新创意大赛，并斩获了<strong>最年轻的国家级一等奖</strong>。在学术研究的道路上我也奋力向前：发表<strong>SCI论文</strong>1篇（共同一作）；<strong>发明专利</strong>2篇；主持<strong>国家级大创</strong>1项；师从<strong>张军院士</strong>并主持<strong>校级科研重点团队</strong>。我实习了射频模块测试与仿真助理工程师，荣获<strong>优秀实习生</strong>称号。
+                        本问提出一种自适应量化事件触发四旋翼飞行器姿态控制方法，并通过指定时间预设性能对无人机的姿态进行控制约束。此外，使用RBFNN解决了系统的不确定性；联合干扰观测器喝RBFNN对外界符合扰动干扰进行最优误差逼近。理论证明系统信号UUB，且没有芝诺效应；实验验证了控制策略的优越性。
                     </p>
 
                     <div class="about__info">
                         <div>
                             <span class="about__info-title">中科院1区TOP</span>
-                            <span class="about__info-name" i18n="about__info-name1">论文发表 <br /> 情况
+                            <span class="about__info-name" i18n="about__info-name1">分区
                             </span>
                         </div>
 
                         <div>
-                            <span class="about__info-title">2</span>
-                            <span class="about__info-name" i18n="about__info-name2">专利 <br />
-                                发表</span>
+                            <span class="about__info-title">1次小修</span>
+                            <span class="about__info-name" i18n="about__info-name2">评审情况<br />
+
                         </div>
 
                         <div>
-                            <span class="about__info-title">10+</span>
-                            <span class="about__info-name" i18n="about__info-name3">市级及 <br />
-                                国家级以上奖项</span>
+                            <span class="about__info-title">?</span>
+                            <span class="about__info-name" i18n="about__info-name3">被引量<br />
+                            </span>
                         </div>
                     </div>
 
                     <div class="about__buttons">
-                        <a download="" href="assets/pdf/简历.pdf" class="button button--flex">
-                            <span i18n="download">Download CV</span><i class="uil uil-download-alt button__icon"></i>
+                        <a download="" href="https://authors.elsevier.com/sd/article/S1270-9638(24)00100-7"
+                            class="button button--flex">
+                            <span i18n="download">Download This Paper</span><i
+                                class="uil uil-download-alt button__icon"></i>
                         </a>
                     </div>
                 </div>
@@ -180,19 +165,14 @@
         <!--==================== QUALIFICATION ====================-->
         <section class="qualification section">
             <h2 class="section__title" i18n="qualification__title">
-                Qualification
+                Time Line
             </h2>
-            <span class="section__subtitle" i18n="qualification__subtitle">My personal journey</span>
+            <span class="section__subtitle" i18n="qualification__subtitle">My acceptance journey</span>
             <div class="qualification__container container">
                 <div class="qualification__tabs">
                     <div class="qualification__button button--flex qualification__active" data-target="#education">
                         <i class="uil uil-graduation-cap qualification__icon"></i>
-                        <span i18n="education">Education</span>
-                    </div>
-
-                    <div class="qualification__button button--flex" data-target="#work">
-                        <i class="uil uil-briefcase-alt qualification__icon"></i>
-                        <span i18n="work">Work</span>
+                        <span i18n="education">录用时间线</span>
                     </div>
                 </div>
                 <div class="qualification__sections">
@@ -225,7 +205,8 @@
 
                             <div>
                                 <h3 class="qualification__title" i18n="qualification1__title">
-                                    20天 Minor revision
+                                    第一次评审:<br>
+                                    Minor revision
                                 </h3>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
@@ -252,15 +233,19 @@
                         </div>
                         <!--==================== QUALIFICATION 4 ====================-->
                         <div class="qualification__data">
-
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
 
                             <div>
                                 <h3 class="qualification__title" i18n="qualification1__title">
-                                    20天 Minor revision
+                                    第二次评审:<br>文章接收
                                 </h3>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
-                                    2024.1.3 早
+                                    2024.2.6 早
                                 </div>
                             </div>
                         </div>
@@ -268,196 +253,41 @@
                         <div class="qualification__data">
                             <div>
                                 <h3 class="qualification__title" i18n="qualification5__title">
-                                    提交 Minor revision and Response
+                                    文章Online
                                 </h3>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
-                                    2024.1.22 早
+                                    2024.2.10 早
                                 </div>
                             </div>
 
                             <div>
                                 <span class="qualification__rounder"></span>
-                                <!-- <span class="qualification__line"></span> -->
+                                <span class="qualification__line"></span>
                             </div>
                         </div>
                         <!--==================== QUALIFICATION 4 ====================-->
                         <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <!--<span class="qualification__rounder"></span>-->
+                                <!--<span class="qualification__line"></span> -->
+                            </div>
                             <div>
                                 <h3 class="qualification__title" i18n="qualification3__title">
-                                    文章接收
+                                    文章见刊
                                 </h3>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
-                                    2024.2.5 早
+                                    2024.x.xx 早
                                 </div>
                             </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <!-- <span class="qualification__line"></span> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!--==================== QUALIFICATION 5 ====================-->
-                    <div class="qualification__data">
-                        <div>
-                            <h3 class="qualification__title" i18n="qualification3__title">
-                                文章Online
-                            </h3>
-                            <div class="qualification__calendar">
-                                <i class="uil uil-calendar-alt"></i>
-                                2024.2.10 早
-                            </div>
-                        </div>
-
-                        <div>
-                            <span class="qualification__rounder"></span>
-                            <!-- <span class="qualification__line"></span> -->
                         </div>
                     </div>
                 </div>
-                <!--==================== QUALIFICATION CONTENT 2 ====================-->
-                <div class="qualification__content" data-content id="work">
-                    <!--==================== QUALIFICATION 1 ====================-->
-                    <div class="qualification__data">
-                        <div></div>
-                        <div>
-                            <span class="qualification__rounder"></span>
-                            <!-- <span class="qualification__line"></span> -->
-                        </div>
-                        <div>
-                            <h3 class="qualification__title" i18n="qualification4__title">
-                                Software Enginner
-                            </h3>
-                            <span class="qualification__subtitle" i18n="qualification4__subtitle">ShenZhen</span>
-                            <div class="qualification__calendar">
-                                <i class="uil uil-calendar-alt"></i>
-                                2022
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             </div>
         </section>
 
-        <!--==================== PORTFOLIO ====================-->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section__title" i18n="portfolio__title">Portfolio</h2>
-            <span class="section__subtitle" i18n="portfolio__subtitle">Most recent works</span>
-
-            <div class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper">
-                    <!--==================== PORTFOLIO 1 ====================-->
-
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="imgs/Mechanism1.png" alt="" class="portfolio__img" />
-
-                        <div class="portfolio_">
-                            <h3 class="portfolio__title" i18n="portfolio1__title">
-                                机械工程创新创意大赛
-                            </h3>
-                            <p class="portfolio__description" i18n="portfolio1__description">
-                                设计了微型草莓采摘机，并进行设计优化斩获国家级一等奖
-                            </p>
-                            <a href="https://gitee.com/asoutherncat/" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Show More
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--==================== PORTFOLIO 2 ====================-->
-
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="imgs/Patent2.png" alt="" class="portfolio__img" />
-
-                        <div class="portfolio_">
-                            <h3 class="portfolio__title" i18n="portfolio2__title">
-                                一种气体约束型碳纳米管场电离推力器
-                            </h3>
-                            <p class="portfolio__description" i18n="portfolio2__description">
-                                针对目前电推进技术的瓶颈和缺陷，提出了一种基于碳纳米管簇发射极新型优化电推，可以降低成本并提高比冲
-                            </p>
-                            <a href="https://gitee.com/asoutherncat/" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Show More
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--==================== PORTFOLIO 3 ====================-->
-
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="imgs/Patent1.png" alt="" class="portfolio__img" />
-
-                        <div class="portfolio_">
-                            <h3 class="portfolio__title" i18n="portfolio3__title">
-                                一种微米级碳纳米管簇发射极加工方法
-                            </h3>
-                            <p class="portfolio__description" i18n="portfolio3__description">
-                                针对电推的发射极进行优化，在化学气相沉淀法上进行了改良，降低屏蔽效应，提高发射极的电离效率
-                            </p>
-                            <a href="https://gitee.com/asoutherncat/" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Show More
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!--==================== PORTFOLIO 4 ====================-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="imgs/Airsim.png" alt="" class="portfolio__img" />
-
-                        <div class="portfolio_">
-                            <h3 class="portfolio__title" i18n="portfolio3__title">
-                                基于预设性能和量化触发无人机姿态环设计
-                            </h3>
-                            <p class="portfolio__description" i18n="portfolio3__description">
-                                提出了一种具有指定时间规定性能函数的四旋翼无人机自适应事件触发量化姿态控制。
-                            </p>
-                            <a href="https://gitee.com/asoutherncat/" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Show More
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!--==================== PORTFOLIO 5 ====================-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="imgs/C4D.png" alt="" class="portfolio__img" />
-
-                        <div class="portfolio_">
-                            <h3 class="portfolio__title" i18n="portfolio3__title">
-                                我的代码、模型、动画仓库
-                            </h3>
-                            <p class="portfolio__description" i18n="portfolio3__description">
-                                包含我课程和竞赛的所有建模和视频项目
-                            </p>
-                            <a href="https://gitee.com/asoutherncat/" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Show More
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- add arrows-->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
 
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
