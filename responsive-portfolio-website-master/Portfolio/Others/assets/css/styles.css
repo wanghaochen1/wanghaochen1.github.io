@@ -1215,3 +1215,10 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.nav__link span {
+    background-color: #dbdace;
+    /* 你可以选择任何你喜欢的颜色 */
+    padding: 5px;
+    /* 调整这个值可以改变背景框的大小 */
+}
