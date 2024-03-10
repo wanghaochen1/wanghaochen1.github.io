@@ -1,0 +1,154 @@
+$(function() {
+  //头部轮播图
+	 $(".banner .flexslider").flexslider({
+		animation:'fade',
+		slideshowSpeed: 6000, //展示时间间隔ms
+		animationSpeed: 1000, //滚动时间ms
+    easing:"swing",
+		touch: true, //是否支持触屏滑动
+    before: function (slider) { //滑动后是否自动轮播
+            slider.pause();
+            slider.play();
+        }
+	});
+   //教学科研轮播
+	 slides()
+	 var currentWidth = 1240;
+		$(window).resize(function() {
+			slides()
+		});
+	 function slides(){
+	 	var winWidth = $(window).width();
+		var conWidth;
+		 if(winWidth <1000) {
+			x = 15;
+      y=260
+		 }else if(winWidth < 1300){
+      x = 25;
+      y=180
+    }else {
+			x = 38;
+      y=180
+		}
+		
+			$(".mode03 .flexslider").flexslider({
+			  animation: "slide",
+		    animationLoop: true,
+		    itemWidth: y,
+		    itemMargin: x,
+		    minItems: 1,
+		    maxItems: 4,
+        touch: true //是否支持触屏滑动
+		   // pausePlay: true
+			});
+	 	
+	 }
+
+   
+   var windowWidth = $(window).width();
+   //判断Li奇偶数
+   $('.mode03 .flexslider .slides > li,.bit-list05 li').each(function(e){
+    if(e%2 == 1){
+      $(this).addClass('even')
+    }
+   })
+   //图片新闻轮播
+   $(".mode04 .flexslider").flexslider({
+      animation:'slide',
+      slideshowSpeed: 6000, //展示时间间隔ms
+      animationSpeed: 1000, //滚动时间ms
+      direction:"vertical",
+      easing:"swing",
+      touch: true //是否支持触屏滑动
+    });
+   //所有轮播图图标
+   $('.flex-direction-nav').each(function(e){
+    $(this).find('a').each(function(){
+      var $this =$(this)
+      $this.addClass('iconfont');
+      $this.text('');
+      if($this.hasClass('flex-prev')){
+        $(this).addClass('iconjiantouzuo')
+      }else if($this.hasClass('flex-next')){
+        $(this).addClass('iconjiantouyou')
+      }
+    })
+    
+  })
+   //控制头部大图图标
+   $('.banner .flex-control-paging a').each(function(e){
+    var $this =$(this)
+    $this.addClass('iconfont');
+    $this.text('');
+    $(this).addClass('iconicon')
+  })
+   
+}); 
+
+//数据北理
+   $(".mode05 .flexslider").flexslider2({
+        animation: "slide",
+        animationLoop: true,
+        itemWidth: 113,
+        itemMargin: 15,
+        minItems:2,
+        maxItems: 6,
+        move:1,
+        slideshowSpeed: 3000, //展示时间间隔ms
+        touch: true //是否支持触屏滑动
+       // pausePlay: true
+      });
+	  $('.mode05 .flex-control-paging a').each(function(e){
+    var $this =$(this)
+    $this.addClass('iconfont');
+    $this.text('');
+    $(this).addClass('icontixing')
+  })
+//侧边导航锚点定位
+function navPosition(){
+  //侧边导航展开与收缩
+  $('.asideNavClose').click(function(){
+    $('#asideNav ul').animate({width: 'hide'}, '300');
+    $(this).animate({width: 'hide'}, '300');
+    $('#asideNav .title2').animate({width: 'show'}, '300');
+    $('#asideNav').removeClass('on')
+    
+  })
+  $('#asideNav .title2').click(function(){
+    $('#asideNav ul,.asideNavClose').animate({width: 'show'}, '300');
+    $(this).hide(0)
+      $('#asideNav').addClass('on')
+
+  })
+ 
+   $('#asideNav li').click(function(e){
+    var target = e.target;
+    var id = $(target).data("to");
+    $('html,body').animate({scrollTop:$('#'+id).offset().top-54}, 800);
+    $(this).addClass('active');
+    $(this).siblings().removeClass('active')
+   })
+   
+  } 
+  $(window).scroll(function(){
+    var scrollTop5 = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+    var clientHeight =document.documentElement.clientHeight/2;
+    var preTop =0; //$('#list > li').eq(1).offset().top;
+    $('.go').each(function(index) {
+      var thisTop = $(this).offset().top;
+       if($(this).next().offset()){
+        preTop =$(this).next().offset().top;
+        }else{
+          preTop = scrollTop5+clientHeight
+          }
+      //debugger;
+      if(scrollTop5 + clientHeight > thisTop  && scrollTop5+clientHeight <= preTop){
+        var thisId = $(this).attr('id');
+        $('#asideNav').find('li[data-to='+thisId+']').eq(0).addClass('active');
+        $('#asideNav').find('li[data-to='+thisId+']').eq(0).siblings().removeClass('active');
+        //return false;
+        
+      }
+    });
+
+})

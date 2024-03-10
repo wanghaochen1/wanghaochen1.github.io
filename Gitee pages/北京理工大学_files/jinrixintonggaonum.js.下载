@@ -1,0 +1,20 @@
+$(function(){
+
+    $.ajax({
+        type: "GET",
+        url: "https://www.bit.edu.cn/common/tongzhi.json",
+        dataType:"JSON",
+        contentType:"application/json;charset=UTF-8",
+        cache: false,
+        success: function (res) {
+            debugger
+            if(res&&res.data){
+                var num = res.data.length;
+                $(".shuliangnum").text("今日新通告"+num+"条");
+            }
+        },
+        error: function (e) {
+            
+        }
+    });	
+});

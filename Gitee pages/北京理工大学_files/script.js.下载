@@ -1,0 +1,326 @@
+Nav('#nav')//导航
+headerFix()
+SerMax()//搜索
+mobideMenu()// 移动端主导航
+logoResize()//logo尺寸
+//搜索点击弹出效果
+function SerMax(){
+    var searchTarget;
+        $(".serBtn > i").click(function(e){ 
+          searchTarget=e.target;
+           $(".ser").animate({width:"200px"});
+           $(this).hide();
+        })
+        $(".ser").click(function(e){
+            searchTarget=e.target;
+            //搜索框搜索事件
+        })
+        $("html").click(function(event) {
+            if (event.target !=searchTarget) {
+                 $(".ser").animate({width:"0"},300);
+                 //$(".ser").delay(300).hide();
+                 $(".serBtn >i").show();
+           }
+        });
+}
+//下拉菜单 例调用：Nav('#nav');
+function Nav(id){
+	var oNav = $(id);
+	var aLi = oNav.find('li');
+	
+	aLi.hover(function (){
+        $(this).addClass('on');
+       $(this).find('.subNav').addClass('zoomIn');
+	},function (){
+        $(this).removeClass('on');
+        $(this).find('.subNav').removeClass('zoomIn');
+	})	
+};
+//移动端主导航 
+function mobideMenu(){
+	$(".mobile-inner-header .mobile-inner-header-icon").click(function(){
+	  	$(this).toggleClass("mobile-inner-header-icon-click mobile-inner-header-icon-out");
+	  	$('body').toggleClass('nav-open');
+	  	$('.black_bg01,.logo').fadeToggle(200)
+	  });
+	$('.black_bg01').click(function(){
+		$(".mobile-inner-header .mobile-inner-header-icon").toggleClass("mobile-inner-header-icon-click mobile-inner-header-icon-out");
+		$('body').toggleClass('nav-open');
+		$(this).fadeToggle(300)
+		$('.logo').fadeToggle(200)
+	})
+	  $(".mobile-inner-nav li > a").each(function( index ) {
+	  	$( this ).css({'animation-delay': (index/20)+'s'});
+	  });
+	  $('.mobile-search-btn').click(function(){
+	  	$('.mobile_search').slideToggle(300)
+	  })
+	  $('.mobile-inner-nav li strong').click(function(){
+				$(this).parent().toggleClass('on');
+				if($(this).parent().hasClass('on')){
+					$(this).addClass('iconarrowUp ')
+					$(this).removeClass('iconarrowDown')
+					$(this).next('.mobile_subNav').slideDown(300)
+					
+				}else{
+					$(this).addClass('iconarrowDown')
+					$(this).removeClass('iconarrowUp');
+					$(this).next('.mobile_subNav').slideUp(300)
+				}
+			})
+
+}
+// function n2(){
+// 	$('.systemList').find('li').each(function(e){
+// 		if(e%2==1){
+// 			$(this).addClass('n2')
+// 		}
+// 	})
+// }
+//移动端顶部点击弹出下拉菜单
+function Menu(menu,main){
+		$(menu).click(function(){
+	  	$(this).toggleClass("mobile-inner-header-icon-click mobile-inner-header-icon-out");
+	  	$(this).find('i').toggleClass('iconarrowDown iconarrowUp')
+	  	$(".sub_navm").slideToggle(250);
+		$('.sub_navm').find('.phone_toggle').click(function(){
+			$(this).next('dl').slideToggle(500);
+			$(this).toggleClass('on');
+			if($(this).hasClass('on')){
+				$(this).html("&times;")
+			}else{
+				$(this).html("+")
+			}
+			})
+	  });
+};
+function subLeft(){
+	$('.subLeft').find('.toggles').click(function(){
+		$(this).next('.second_nav').slideToggle(500);
+		$(this).parent('li').toggleClass('active')
+		})
+	}
+/*回到顶部*/
+$(window).scroll(function(){
+        //获取窗口的滚动条的垂直位置
+        var s = $(window).scrollTop();
+        //当窗口的滚动条的垂直位置大于页面的最小高度时，让返回顶部元素渐现，否则渐隐
+        if( s > 400){
+            $(".goTop").fadeIn(100);
+        }else{
+            $(".goTop").fadeOut(200);
+        };
+    });
+$('.goTop').click(function(){
+
+	$('body,html').stop().animate({scrollTop:0});
+
+	return false;
+
+});
+function headerFix(){
+	var iWSon = document.documentElement.clientWidth;
+	if(iWSon > 998){
+		var $windowHeight = $(window).height();
+		var bodyHeight = $(document.body).height()
+	  	var $headerHeight = $('.header').height()*2;
+	    $(window).scroll(function(){
+	      var scrollTop = $(window).scrollTop();
+	      if(scrollTop >= 89 && bodyHeight > $windowHeight+$headerHeight){
+	      	$('.header').addClass('current');
+	      	$('.logo .logo_bg').slideDown(300);
+	      	if($('.header').hasClass('current')){
+	      		$('.headerFix-menu').fadeIn(300);
+	      		$('.header.current .top').slideUp(300);
+	      		$('.logo_01').find('image').attr({width:90,height:90})
+        		$('.logo_01').find('svg').attr({width:90,height:90}) 
+	      	}
+	      }else{
+	      	$('.header').removeClass('current');
+	      	$('.logo .logo_bg').slideUp(300);
+	      	if($('.header').hasClass('current')){
+	      		$('.headerFix-menu').fadeIn(300);
+	      	}else{
+	      		$('.headerFix-menu,.headerFix-close').fadeOut(300);
+	      		$('.header .top').slideDown(300)
+	      		$('.logo_01').find('image').attr({width:116,height:116})
+        		$('.logo_01').find('svg').attr({width:116,height:116}) 
+	      	}
+	      }
+	      
+	    })
+	}
+	$('.headerFix-menu').click(function(){
+		$('.header.current .top').slideDown(300)
+		$(this).fadeOut(100);
+		$('.headerFix-close').fadeIn(300)
+
+	})
+	$('.headerFix-close').click(function(){
+		$(this).fadeOut(300)
+		$('.header.current .top').slideUp(300);
+		$('.headerFix-menu').fadeIn(300)
+	})
+}
+function logoResize(){
+    var sWSon = document.documentElement.clientWidth;
+     if(sWSon<=998){
+        $('.logo_01').find('image').attr({width:32,height:32})
+        $('.logo_01').find('svg').attr({width:32,height:32}) 
+        $('.logo_02').find('image').attr({width:120,height:29})
+        $('.logo_02').find('svg').attr({width:120,height:29}) 
+    }else if(sWSon<=1300){
+        $('.logo_01').find('image').attr({width:94,height:94})
+        $('.logo_01').find('svg').attr({width:94,height:94}) 
+        $('.logo_02').find('image').attr({width:150,height:36})
+        $('.logo_02').find('svg').attr({width:150,height:36})       
+    }else{
+    	$('.logo_01').find('image').attr({width:116,height:116})
+        $('.logo_01').find('svg').attr({width:116,height:116}) 
+        $('.logo_02').find('image').attr({width:183,height:44})
+        $('.logo_02').find('svg').attr({width:183,height:44})   
+    }
+
+    
+}
+$(window).resize(function(){
+	logoResize()
+})
+// function menuToggle(){
+// 	$('.menu_btn').click(function(){
+// 		$(this).next('.system_list').slideToggle(500)
+// 		})
+// 	}
+// /*首页学术动态*/
+// function indexLi(){
+// 	var sWSon = document.documentElement.clientWidth;
+// 	if(sWSon<=1225){
+// 		$('.list03').find('li').each(function(e){
+// 			$(this).addClass('img-lf')
+// 		})
+// 	}else{
+// 		$('.list03').find('li').each(function(e){
+// 			if(e<=1){
+// 				$(this).removeClass('img-lf')
+// 			}
+			
+// 		})
+// 	}
+// }
+
+
+// $(function(){
+// 	var sWSon = document.documentElement.clientWidth;
+// 	if(sWSon >=1225){
+// 		var headerHeight = $('.header').height();
+// 		var bannerHeight = $('.subBanner').height();
+// 		var footerHeight = $('.footer').height();
+// 		var cHeight = document.documentElement.clientHeight;
+// 		var subPage_height =cHeight-headerHeight-bannerHeight-footerHeight-114;
+// 		$('.subPage').css('min-height',subPage_height+"px");
+// 	}
+// })
+// function share(){
+// 	$('.share_btn').click(function(){
+// 		$(this).next('.bdsharebuttonbox').slideToggle(500)
+// 	})
+	
+// }
+function subLeftMove(){
+	var Top1 = $('.subLeft ul').find('.active').offset().top;
+	//var Top1 = $('.subLeft ul').find('li').eq(0).offset().top;
+	var headerHeight = $('.header').outerHeight();
+	var bannerHeight = $('.subBanner').outerHeight();
+		//alert(headerHeight)
+	$('.line').css({"top":Top1-headerHeight-bannerHeight})
+	
+	$('.subLeft ul').mouseleave(function(){
+		$('.line').stop().animate({"top":Top1-headerHeight-bannerHeight},200)					
+	})
+	
+	$('.subLeft ul>li a').click(function(e){
+		stopBubble(e)
+	})
+	$('.subLeft ul').mousemove(function(e){
+		var ulTop = $('.subLeft ul').offset().top;
+		//这里可得到鼠标X坐标
+		var pointX = e.pageX;
+		//这里可以得到鼠标Y坐标
+		var pointY = e.pageY;
+		if(pointY-ulTop >= 0){
+			$('.line').stop().animate({"top":pointY-ulTop-20},200)
+		}				
+	})
+	function stopBubble(e) { 
+	//如果提供了事件对象，则这是一个非IE浏览器 
+	if ( e && e.stopPropagation ) 
+	    //因此它支持W3C的stopPropagation()方法 
+	    e.stopPropagation(); 
+	else
+	    //否则，我们需要使用IE的方式来取消事件冒泡 
+	    window.event.cancelBubble = true; 
+	}
+}
+
+//判断奇偶数
+function even(list){
+  $(list).find('li').each(function(e){
+    if((e%2 == 1)){
+      $(this).addClass('li2')
+    }
+  })
+}
+//侧边栏固定和跟随
+function asideFix(){
+	$(window).scroll(function(){
+		var scrollTop = $(window).scrollTop();
+		var asideHeight = $(".subLeft").height()
+		var subBannerHeight = $('.subBanner').height()
+	  var conHeight = $(".subPage").height();
+	  conHeight = conHeight - asideHeight;
+		 if(scrollTop < asideHeight+subBannerHeight+92){
+		 	$('.subLeft').removeClass('fixTop');
+		 }else{
+		 	$('.subLeft').addClass('fixTop');
+		 }
+		 // if(scrollTop > conHeight){
+		 // 		$('.subLeft').removeClass('fixTop');
+		 // 		$('.subLeft').addClass('fixBottom');
+		 // }else{
+		 // 	$('.subLeft').removeClass('fixBottom');
+		 // }
+	})
+}
+//治理架构列表切换
+function listToggle(){
+  $('.bit-list09').find('.bit3Mode1').css('display','none')
+  $('.bit-list09').find('li').eq(0).find('.bit3Mode1').css('display','block').parent().addClass('open');
+  $('.bit-list09').find('li').eq(0).find('.toggles').addClass('iconarrowDown').removeClass('iconicon_arrow_right')
+  $('.bit-list09').find('.toggles').click(function(){
+    if($(this).parents('li').hasClass('open')){
+      $(this).parent().nextAll('div').slideUp(300);
+      $(this).parents('li').removeClass('open');
+      $(this).addClass('iconicon_arrow_right').removeClass('iconarrowDown');
+    }else{
+      $(this).parent().nextAll('div').slideDown(300);
+      $(this).parents('li').addClass('open');
+      $(this).addClass('iconarrowDown').removeClass('iconicon_arrow_right');
+      $(this).parents('li').siblings().removeClass('open').find('.bit3Mode1').slideUp(300);
+       $(this).parents('li').siblings().find('.toggles').addClass('iconicon_arrow_right').removeClass('iconarrowDown');
+    }
+  })
+}
+
+//数据发布表格奇数偶数不同的样式
+
+
+function odd_even(id,odd,even){
+	$(id).find("tr").each(function(index,element){
+	if(index%2==1)
+		$(this).css(odd);
+		//$(this).addClass('odd');
+	else
+		$(this).css(even);
+		//$(this).addClass('even');
+	});
+} 
