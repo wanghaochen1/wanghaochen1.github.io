@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!--==================== UNICONS 图标====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- iconfont font class 方式引用图标 -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
+    /> -->
+
+    <title>Responsive Portfolio Website</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header scroll-header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">ASOUTHERNCAT</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class="uil uil-estate nav__icon"></i>
+                            <p i18n="home">专利</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>
+                            <p i18n="about">专利简介</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>
+                            <p i18n="contact">Time Line</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <div class="nav__link" id="translate" value="en">
+                            <svg class="icon nav__icon-svg" aria-hidden="true">
+                                <use xlink:href="#icon-fanyi"></use>
+                            </svg>
+                            <a class="=nav__link" id="nav__translate">Translate</a>
+                        </div>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__btns">
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://github.com/wanghaochen1?tab=repositories" target="_blank"
+                            class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="400" height="400" fill="url(#pattern)" />
+                            <defs>
+                                <pattern id="pattern" patternUnits="userSpaceOnUse" width="200" height="187">
+                                    <image class="home__blob-img" x="0" y="20" xlink:href="imgs/Patent1.png" width="150"
+                                        height="150" />
+                                </pattern>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title" i18n="home__title">
+                            一种气体约束型碳纳米管场电离推力器
+                        </h1>
+                        <h3 class="home__subtitle" i18n="home__subtitle">
+                            公开于2024-12-19
+                        </h3>
+                        <p class="home__description" i18n="home__description">
+                            本发明公开了一种气体约束型碳纳米管场电离推力器,包括第一极板、第二极板、气体约束板、密封圈、第一壳体和第二壳体。第二极板上设置有通过化学气相沉淀法和化学点位遮盖法生成有间隙的碳纳米管簇，其尖端电场更大，比普通的发射极有更高的电离效率，但碳纳米管簇的分布较为稀疏；气体约束装置与发射极的碳纳米管簇相互配合，保证碳纳米管簇有相互独立的电离空间，避免工质气体逸散到碳纳米管簇的间隙中，从而提高电离效率；同时气体约束装置有可以进一步屏蔽碳纳米管簇之间的电场影响，避免了推进期间不同碳纳米管簇之间的相互干扰，提高推力器的可控性的同时进一步提高电离效率，本装置可减少工质气体的浪费，提高推力器的使用寿命。
+                        </p>
+                        <a href="#contact" class="button button-flex">
+                            <span i18n="home__contact">Contact Me</span>
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
+                        <span class="home__scroll-name" i18n="home__scroll-name">Scroll down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <h2 class="section__title" i18n="about__title">专利简介</h2>
+            <span class="section__subtitle" i18n="about__subtitle">Introduction</span>
+            <div class="about__container container grid">
+                <img src="imgs/Img1.png" alt="" class="about__img" />
+
+
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        随着电推进技术的不断发展，发射极的结构和制作工艺也在不断更新。而目前较为前沿的发射极使用化学气相沉淀法，并通过打孔薄膜遮盖反应点位来生长出有间隔的碳纳米管簇，可以大幅提高场强，提高工质气体的电离比例。但是其主要的电离区域仍然集中在碳纳米管簇的附近，大量在碳纳米管簇之间的工质气体仍无法电离，导致推力器的工作效率不高，工质气体浪费严重。
+                        本发明专利基于提出的发射极优化方法，设计了对应的电离推力器，实现了理论到实际的转化。
+                    </p>
+                    <div class="about__buttons">
+                        <a download="" href="imgs/一种气体约束型碳纳米管场电离推力器.docx" class="button button--flex">
+                            <span i18n="download">Download This Patent</span><i
+                                class="uil uil-download-alt button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--==================== QUALIFICATION ====================-->
+        <section class="qualification section">
+            <h2 class="section__title" i18n="qualification__title">
+                Time Line
+            </h2>
+            <span class="section__subtitle" i18n="qualification__subtitle">My acceptance journey</span>
+            <div class="qualification__container container">
+                <div class="qualification__tabs">
+                    <div class="qualification__button button--flex qualification__active" data-target="#education">
+                        <i class="uil uil-graduation-cap qualification__icon"></i>
+                        <span i18n="education">录用时间线</span>
+                    </div>
+                </div>
+                <div class="qualification__sections">
+                    <!--==================== QUALIFICATION CONTENT 1 ====================-->
+                    <div class="qualification__content qualification__active" data-content id="education">
+                        <!--==================== QUALIFICATION 1 ====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title" i18n="qualification1__title">
+                                    专利受理
+                                </h3>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2023.9.14
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                        <!--==================== QUALIFICATION 2 ====================-->
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title" i18n="qualification1__title">
+                                    专利初审合格
+                                </h3>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2023.11.29
+                                </div>
+                            </div>
+                        </div>
+                        <!--==================== QUALIFICATION 3 ====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title" i18n="qualification1__title">
+                                    专利公开
+                                </h3>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2023.1.26
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="about section" id="about">
+            <h2 class="section__title" i18n="about__title">具体原理</h2>
+            <span class="section__subtitle" i18n="about__subtitle">Reason</span>
+            <div class="about__container container grid">
+                <img src="imgs/result.png" alt="" class="about__img" />
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        由于化学气相沉淀法生成的碳纳米管簇密度极高，在尖端部分会产生明显的屏蔽效应，影响工质气体的电离。在实验中，未加工的发射极的工质电离率几乎为0，但是破碎的碳纳米管片有更高的电离率。通过Comsol仿真和实物实验，最终确定可以通过遮盖反应点位的方法来有效提高发射极电离率。同时，需要设置引导装置保证工质气体可以进入并电离后顺利排出，故作此发明专利。
+                </div>
+            </div>
+        </section>
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title" i18n="contact__title">Contact me</h2>
+            <span class="section__subtitle" i18n="contact__subtitle">Get in touch</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-phone-alt contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title" i18n="tel">Contact me (WeChat)</h3>
+                            <span class="contact__subtitle" i18n="tel__number">wanghaocheniam</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title" i18n="email">E-mail</h3>
+                            <span class="contatc__subtitle" i18n="email__address">wanghaochen001@outlook.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title" i18n="location">Location</h3>
+                            <span class="contatc__subtitle" i18n="location__detail">BeiJing , CHN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">HaochenWang's Blog</h1>
+                    <span class="footer__subtitle" i18n="home__subtitle">个人简历Blog</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#skills" class="footer__link" i18n="skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer__link" i18n="portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link" i18n="contact">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://github.com/wanghaochen1" target="_blank">
+                        <svg class="icon footer__social" aria-hidden="true">
+                            <use xlink:href="#icon-github"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copy">
+                &#169; ASOUTHERNCAT.Copy from
+                <a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
+            </p>
+        </div>
+    </footer>
+
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- iconfont JS -->
+    <script src="assets/js/iconfont.js"></script>
+    <!-- jquery -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="assets/js/jquery.i18n.min.js"></script>
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+
+    <!-- translate JS -->
+    <script src="assets/js/cn-en-translate.js"></script>
+
+</body>
+
+</html>

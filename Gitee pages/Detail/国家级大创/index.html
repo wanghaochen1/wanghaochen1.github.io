@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!--==================== UNICONS 图标====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- iconfont font class 方式引用图标 -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
+    /> -->
+
+    <title>Responsive Portfolio Website</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header scroll-header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">My Projects</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class="uil uil-estate nav__icon"></i>
+                            <p i18n="home">国家级大创</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>
+                            <p i18n="about">项目简介</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>
+                            <p i18n="contact">Time Line</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <div class="nav__link" id="translate" value="en">
+                            <svg class="icon nav__icon-svg" aria-hidden="true">
+                                <use xlink:href="#icon-fanyi"></use>
+                            </svg>
+                            <a class="=nav__link" id="nav__translate">Translate</a>
+                        </div>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__btns">
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://github.com/wanghaochen1?tab=repositories" target="_blank"
+                            class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="400" height="400" fill="url(#pattern)" />
+                            <defs>
+                                <pattern id="pattern" patternUnits="userSpaceOnUse" width="200" height="187">
+                                    <image class="home__blob-img" x="0" y="20" xlink:href="imgs./national.png"
+                                        width="150" height="150" />
+                                </pattern>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title" i18n="home__title">
+                            仿生应用湿黏附材料研发及其在医学领域的创新应用
+                        </h1>
+                        <h3 class="home__subtitle" i18n="home__subtitle">
+                            于2024/05结项
+                        </h3>
+                        <p class="home__description" i18n="home__description">
+                            湿黏附贴片在攀爬救援、医学等领域有着广泛的应用前景，而制作出高吸力，高动态的黏附贴片一直以来是生物学家和机械设计者在爬壁方面关注的焦点，但是目前仍存在较多关键技术问题亟待解决。湿黏附贴片的设计和应用方面仍存在很大缺陷。
+                        </p>
+                        <a href="#contact" class="button button-flex">
+                            <span i18n="home__contact">Contact Me</span>
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
+                        <span class="home__scroll-name" i18n="home__scroll-name">Scroll down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <h2 class="section__title" i18n="about__title">项目简介</h2>
+            <span class="section__subtitle" i18n="about__subtitle">Introduction</span>
+            <div class="about__container container grid">
+                <img src="imgs/原理.png" alt="" class="about__img" />
+
+
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        在机械工程创新创意赛中，赵杰亮老师发现了我的机械天赋，随后邀请我进入团队和博士生学长进行初步科研学习。于是我加入了湿粘附材料的项目组中，粘附材料主要可以分为3类：静态（藤壶），低动态（章鱼吸盘）和高动态（昆虫足部）。国创项目主要针对当前结构进行优化，并寻找可以使用该湿粘附贴片的场景。
+                    </p>
+                </div>
+            </div>
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        <br>
+                        在机械工程创新创意赛中，赵杰亮老师发现了我在机械方向地天赋，随后邀请我进入团队和博士生学长进行初步科研学习。于是我加入了湿粘附材料的项目组中，粘附材料主要可以分为3类：静态（藤壶），低动态（章鱼吸盘）和高动态（昆虫足部）。国创项目主要针对当前结构进行优化，并寻找可以使用该湿粘附贴片的场景。
+                    </p>
+                </div>
+                <img src="imgs/原理.png" alt="" class="about__img" />
+            </div>
+        </section>
+        <!--==================== QUALIFICATION ====================-->
+
+        <section class="about section" id="about">
+
+            <div class="about__container container grid">
+                <img src="imgs/result.png" alt="" class="about__img" />
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        由于化学气相沉淀法生成的碳纳米管簇密度极高，在尖端部分会产生明显的屏蔽效应，影响工质气体的电离。在实验中，未加工的发射极的工质电离率几乎为0，但是破碎的碳纳米管片有更高的电离率。通过Comsol仿真和实物实验，最终确定可以通过遮盖反应点位的方法来有效提高发射极电离率。同时，需要设置引导装置保证工质气体可以进入并电离后顺利排出，故作此发明专利。
+                </div>
+            </div>
+        </section>
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title" i18n="contact__title">Contact me</h2>
+            <span class="section__subtitle" i18n="contact__subtitle">Get in touch</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-phone-alt contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title" i18n="tel">Contact me (WeChat)</h3>
+                            <span class="contact__subtitle" i18n="tel__number">wanghaocheniam</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title" i18n="email">E-mail</h3>
+                            <span class="contatc__subtitle" i18n="email__address">wanghaochen001@outlook.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title" i18n="location">Location</h3>
+                            <span class="contatc__subtitle" i18n="location__detail">BeiJing , CHN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">HaochenWang's Blog</h1>
+                    <span class="footer__subtitle" i18n="home__subtitle">个人简历Blog</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#skills" class="footer__link" i18n="skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer__link" i18n="portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link" i18n="contact">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://github.com/wanghaochen1" target="_blank">
+                        <svg class="icon footer__social" aria-hidden="true">
+                            <use xlink:href="#icon-github"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copy">
+                &#169; ASOUTHERNCAT.Copy from
+                <a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
+            </p>
+        </div>
+    </footer>
+
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- iconfont JS -->
+    <script src="assets/js/iconfont.js"></script>
+    <!-- jquery -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="assets/js/jquery.i18n.min.js"></script>
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+
+    <!-- translate JS -->
+    <script src="assets/js/cn-en-translate.js"></script>
+
+</body>
+
+</html>

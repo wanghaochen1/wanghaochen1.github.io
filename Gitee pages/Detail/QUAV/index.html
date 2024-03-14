@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!--==================== UNICONS 图标====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- iconfont font class 方式引用图标 -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
+    /> -->
+
+    <title>Responsive Portfolio Website</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header scroll-header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">ASOUTHERNCAT</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class="uil uil-estate nav__icon"></i>
+                            <p i18n="home">QUAV姿态论文</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>
+                            <p i18n="about">文章简介</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>
+                            <p i18n="contact">Time Line</p>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <div class="nav__link" id="translate" value="en">
+                            <svg class="icon nav__icon-svg" aria-hidden="true">
+                                <use xlink:href="#icon-fanyi"></use>
+                            </svg>
+                            <a class="=nav__link" id="nav__translate">Translate</a>
+                        </div>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__btns">
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://github.com/wanghaochen1?tab=repositories" target="_blank"
+                            class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="400" height="400" fill="url(#pattern)" />
+                            <defs>
+                                <pattern id="pattern" patternUnits="userSpaceOnUse" width="200" height="187">
+                                    <image class="home__blob-img" x="0" y="20" xlink:href="assets/img/me.png"
+                                        width="200" height="187" />
+                                </pattern>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title" i18n="home__title">
+                            QUAV姿态论文
+                        </h1>
+                        <h3 class="home__subtitle" i18n="home__subtitle">
+                            发表于Aerospace Science and Technology
+                        </h3>
+                        <p class="home__description" i18n="home__description">
+                            本文针对无人机姿态控制问题，提出了一种具有指定时间规定性能函数的四旋翼无人机自适应事件触发量化姿态控制。降低通信压力的同时保证姿态跟踪性能。
+                        </p>
+                        <a href="#contact" class="button button-flex">
+                            <span i18n="home__contact">Contact Me</span>
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
+                        <span class="home__scroll-name" i18n="home__scroll-name">Scroll down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <h2 class="section__title" i18n="about__title">文章简介</h2>
+            <span class="section__subtitle" i18n="about__subtitle">Introduction</span>
+            <div class="about__container container grid">
+                <img src="imgs/Data1.png" alt="" class="about__img" />
+
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        本文提出一种自适应量化事件触发四旋翼飞行器姿态控制方法，并通过指定时间预设性能对无人机的姿态进行控制约束。此外，使用RBFNN解决了系统的不确定性；联合干扰观测器和RBFNN对外界符合扰动干扰进行最优误差逼近。理论证明系统信号UUB，且没有芝诺效应；实验验证了控制策略的优越性。
+                    </p>
+
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">中科院1区TOP</span>
+                            <span class="about__info-name" i18n="about__info-name1">分区
+                            </span>
+                        </div>
+
+                        <div>
+                            <span class="about__info-title">1次小修</span>
+                            <span class="about__info-name" i18n="about__info-name2">评审情况<br />
+
+                        </div>
+
+                        <div>
+                            <span class="about__info-title">?</span>
+                            <span class="about__info-name" i18n="about__info-name3">被引量<br />
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="about__buttons">
+                        <a download="" href="https://authors.elsevier.com/sd/article/S1270-9638(24)00100-7"
+                            class="button button--flex">
+                            <span i18n="download">Download This Paper</span><i
+                                class="uil uil-download-alt button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--==================== QUALIFICATION ====================-->
+        <section class="qualification section">
+            <h2 class="section__title" i18n="qualification__title">
+                Time Line
+            </h2>
+            <span class="section__subtitle" i18n="qualification__subtitle">My acceptance journey</span>
+            <div class="qualification__container container">
+                <div class="qualification__tabs">
+                    <div class="qualification__button button--flex qualification__active" data-target="#education">
+                        <i class="uil uil-graduation-cap qualification__icon"></i>
+                        <span i18n="education">录用时间线</span>
+                    </div>
+                </div>
+                <div class="qualification__sections">
+                    <!--==================== QUALIFICATION CONTENT 1 ====================-->
+                    <div class="qualification__content qualification__active" data-content id="education">
+                        <!--==================== QUALIFICATION 1 ====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title" i18n="qualification1__title">
+                                    投稿于Aerospace Science and Technology
+                                </h3>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2023.12.9 晚
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                        <!--==================== QUALIFICATION 2 ====================-->
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title" i18n="qualification1__title">
+                                    第一次评审:<br>
+                                    Minor revision
+                                </h3>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2024.1.3 早
+                                </div>
+                            </div>
+                        </div>
+                        <!--==================== QUALIFICATION 3 ====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title" i18n="qualification1__title">
+                                    提交 Minor revision and Response
+                                </h3>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2024.1.22 早
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                        <!--==================== QUALIFICATION 4 ====================-->
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title" i18n="qualification1__title">
+                                    第二次评审:<br>文章接收
+                                </h3>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2024.2.6 早
+                                </div>
+                            </div>
+                        </div>
+                        <!--==================== QUALIFICATION 3 ====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title" i18n="qualification5__title">
+                                    文章Online
+                                </h3>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2024.2.10 早
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                        <!--==================== QUALIFICATION 4 ====================-->
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <!--<span class="qualification__rounder"></span>-->
+                                <!--<span class="qualification__line"></span> -->
+                            </div>
+                            <div>
+                                <h3 class="qualification__title" i18n="qualification3__title">
+                                    文章见刊
+                                </h3>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2024.x.xx 早
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title" i18n="contact__title">Contact me</h2>
+            <span class="section__subtitle" i18n="contact__subtitle">Get in touch</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-phone-alt contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title" i18n="tel">Contact me (WeChat)</h3>
+                            <span class="contact__subtitle" i18n="tel__number">wanghaocheniam</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title" i18n="email">E-mail</h3>
+                            <span class="contatc__subtitle" i18n="email__address">wanghaochen001@outlook.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title" i18n="location">Location</h3>
+                            <span class="contatc__subtitle" i18n="location__detail">BeiJing , CHN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">HaochenWang's Blog</h1>
+                    <span class="footer__subtitle" i18n="home__subtitle">个人简历Blog</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#skills" class="footer__link" i18n="skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer__link" i18n="portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link" i18n="contact">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://github.com/wanghaochen1" target="_blank">
+                        <svg class="icon footer__social" aria-hidden="true">
+                            <use xlink:href="#icon-github"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copy">
+                &#169; ASOUTHERNCAT.Copy from
+                <a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
+            </p>
+        </div>
+    </footer>
+
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- iconfont JS -->
+    <script src="assets/js/iconfont.js"></script>
+    <!-- jquery -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="assets/js/jquery.i18n.min.js"></script>
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+
+    <!-- translate JS -->
+    <script src="assets/js/cn-en-translate.js"></script>
+
+</body>
+
+</html>
