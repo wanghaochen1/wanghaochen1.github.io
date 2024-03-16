@@ -144,19 +144,47 @@
                 <img src="./imgs/肠胃机器人.png" alt="" class="about__img" />
             </div>
             <div class="about__container container grid">
-                <img src="./imgs/差相.png" alt="" class="about__img" />
+
+                <div class="about__data">
+                    <iframe src="https://player.bilibili.com/player.html?bvid=BV1L6421w7zY&high_quality=1"
+                        scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"
+                        style="width: 80%; height: 200x;">
+                    </iframe>
+                </div>
+
                 <div class="about__data">
                     <p class="about__description" i18n="about__description">
                         <br>
-                        在设计仿生乌贼机器人控制算法的时候，我们主要面临了两个问题：一是机器人的运动轨迹规划，二是机器人的通信问题。在运动轨迹规划方面，我结合跨越险阻竞赛的经历，使用了stanly控制器和PID来控制专项，frenet
+                        在设计仿生乌贼机器人控制算法的时候，我们主要面临了两个问题：一是机器人的运动轨迹规划，二是机器人的通信问题。在运动轨迹规划方面，我结合跨越险阻竞赛的经历，使用了stanley控制器和PID来控制专项，frenet
                         optimal来实现局部路径规划（详情见github项目）。在通信方面，经过我们的调研，可以使用事件触发的方式来降低通信负担，这也为我未来的无人机研究打好了基础。
                     </p>
+                </div>
+
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        <br>
+                        由于肠胃机器人体积较小,运算能力也较弱.于是通过阅读论文，我们发现可以应用事件触发+量化器进行优化,降低控制率计算频率。
+                    </p>
+                </div>
+                <div class="about__buttons">
+                    <a download="" href="https://github.com/wanghaochen1/BIT_car" class="button button--flex">
+                        <span i18n="download">stanley控制器的代码<br>来自跨越险阻竞赛</span><i
+                            class="uil uil-download-alt button__icon"></i>
+                    </a>
+                </div>
+                <img src="./imgs/电极.png" alt="" class="about__img" />
+                <div>
+                    <div class="about__data">
+                        <p class="about__description" i18n="about__description">
+                            <br>
+                            除了仿生机器人，我还提出了基于湿粘附材料的心脏监测电极，通过将石墨烯覆盖于湿粘附贴片表面，形成导电层来读取心脏信号。但是遇到了工频干扰，基线漂移，和随机噪声等问题。为了解决这些问题，我提出了基于小波变换的心脏信号处理方法，通过小波变换将心脏信号分解成不同频率的信号，然后通过阈值滤波来去除噪声。同时对于运动造成的其他信号干扰等问题，使用MUSIC算法来进行信号分离。同时我还设计了自适应无源滤波器,专门用于处理肌电干扰产生的高频信号.
+                        </p>
+                    </div>
                 </div>
 
             </div>
         </section>
         <!--==================== QUALIFICATION ====================-->
-
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
             <h2 class="section__title" i18n="contact__title">Contact me</h2>
