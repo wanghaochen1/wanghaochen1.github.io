@@ -138,24 +138,25 @@
                 <div class="about__data">
                     <p class="about__description" i18n="about__description">
                         <br>
-
+                        我的任务主要是针对第一代湿粘附贴片寻找应用场景。根据文献查找，我们首先了外部磁场驱动的软体条状机器人和目前应用于肠胃监测的胶囊机器人，但是这些机器人都无法针对病灶进行长期定点观测。因为，我们根据湿粘附贴片的特性设计了仿生乌贼机器人。该机器人使用曲柄摇块机构仿造乌贼的肉鳍运动。为了实现空间的压缩，我还设计了差相机构来减小机器人的体积。
                     </p>
                 </div>
-                <img src="imgs/原理.png" alt="" class="about__img" />
+                <img src="./imgs/肠胃机器人.png" alt="" class="about__img" />
+            </div>
+            <div class="about__container container grid">
+                <img src="./imgs/差相.png" alt="" class="about__img" />
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        <br>
+                        在设计仿生乌贼机器人控制算法的时候，我们主要面临了两个问题：一是机器人的运动轨迹规划，二是机器人的通信问题。在运动轨迹规划方面，我结合跨越险阻竞赛的经历，使用了stanly控制器和PID来控制专项，frenet
+                        optimal来实现局部路径规划（详情见github项目）。在通信方面，经过我们的调研，可以使用事件触发的方式来降低通信负担，这也为我未来的无人机研究打好了基础。
+                    </p>
+                </div>
+
             </div>
         </section>
         <!--==================== QUALIFICATION ====================-->
 
-        <section class="about section" id="about">
-
-            <div class="about__container container grid">
-                <img src="imgs/result.png" alt="" class="about__img" />
-                <div class="about__data">
-                    <p class="about__description" i18n="about__description">
-                        由于化学气相沉淀法生成的碳纳米管簇密度极高，在尖端部分会产生明显的屏蔽效应，影响工质气体的电离。在实验中，未加工的发射极的工质电离率几乎为0，但是破碎的碳纳米管片有更高的电离率。通过Comsol仿真和实物实验，最终确定可以通过遮盖反应点位的方法来有效提高发射极电离率。同时，需要设置引导装置保证工质气体可以进入并电离后顺利排出，故作此发明专利。
-                </div>
-            </div>
-        </section>
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
             <h2 class="section__title" i18n="contact__title">Contact me</h2>
