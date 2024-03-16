@@ -96,13 +96,13 @@
 
                     <div class="home__data">
                         <h1 class="home__title" i18n="home__title">
-                            一种微米级碳纳米管簇发射极加工方法
+                            碳纳米管簇发射极加工和推力器设计
                         </h1>
                         <h3 class="home__subtitle" i18n="home__subtitle">
-                            公开于2023-12-08
+                            两个专利均公开于2023-12
                         </h3>
                         <p class="home__description" i18n="home__description">
-                            本专利针对电推技术中发射极进行优化，提出了一种全新的发射极加工方法并进行了实验验证。本方法可以有效提高发射极的发射性能，提高电推系统的工作效率。
+                            一个专利聚焦于发射极本身的理论和制作方法,另一个专利聚焦于根据特点优化当前的推力器的设计.
                         </p>
                         <a href="#contact" class="button button-flex">
                             <span i18n="home__contact">Contact Me</span>
@@ -145,6 +145,45 @@
 
             </div>
         </section>
+
+
+        <section>
+            <span class="section__subtitle" i18n="about__subtitle">研发过程</span>
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        大一的时候,我加入了书院科协,负责组织学科交流活动.在偶然的机遇下,加入了武志文老师的项目组,研究空间电推技术.当时的项目组正在研究空间电推技术--电推的比冲大,精度可调,但是目前中国并没有可以实际使用的电推系统.<br>
+                        当时项目组面临着一个问题:<strong>碳纳米管簇发射极电离工质的能力似乎非常差,和预期分析严重不符.</strong>于是老师让我去分析原因,并解决问题.
+                        在了解化学气相沉淀法的原理后,我们迅速确定了问题:<strong>CVD制作的碳纳米管簇的间距过小,
+                            产生的严重的屏蔽效应,
+                            只有边界部分的碳纳米管才能令工质气体电离. </strong>
+                    </p>
+                </div>
+                <img src="imgs/样机.jpg" alt="" class="about__img" />
+                <img src="imgs/comsol.png" alt="" class="about__img" />
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        我通过comsol仿真计算出<strong>阵列的碳纳米管场强只有独立的1%</strong> <br>
+                        远远达不到工质气体的电离程度. 为了验证我的猜想和理解, 我将整片的碳纳米管簇进行切分,并重新进行了实验.
+                    </p>
+                </div>
+                <img src="imgs/实验数据.jpg" alt="" class="about__img" />
+                <img src="imgs/切割后.jpg" alt="" class="about__img" />
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        通过实验,可以明显看到,<strong>切割后的发射极电流明显增大</strong>,因此我的猜想是正确的.<br>但是通过切割来改变碳纳米管簇发射极的办法并不是长久之计,因此我重新计算:在Φ30mm基底上打45万个Φ10μm的孔可以兼顾供气和提高电离率,<strong>可以令电离边界达到14m
+                            比冲达到1700s 最大推力可以达50μN</strong>
+                    </p>
+                </div>
+                <img src="imgs/推力器.png" alt="" class="about__img" />
+                <img src="imgs/整体.png" alt="" class="about__img" />
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        当然,优化的不仅仅是发射极,推力器的设计也是一个重要的环节.在推力器的设计上, 由于发射极已经是单根的碳纳米管, 因此很难在基底上进行打孔(这样很容易破坏发射极) <br>
+                        因此,我设计了<strong>迂回的气体通道, 使得气体首先经过电场较强的外侧,后向中心流动</strong> 这样可以充分利用碳纳米管簇的电离能力, 提高电离率.
+                </div>
+            </div>
+        </section>
         <!--==================== QUALIFICATION ====================-->
         <section class="qualification section">
             <h2 class="section__title" i18n="qualification__title">
@@ -169,7 +208,7 @@
                                 </h3>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
-                                    2023.8.9
+                                    2023.8
                                 </div>
                             </div>
 
@@ -192,7 +231,7 @@
                                 </h3>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
-                                    2023.10.17
+                                    2023.10
                                 </div>
                             </div>
                         </div>
@@ -204,7 +243,7 @@
                                 </h3>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
-                                    2023.12.8
+                                    2023.12
                                 </div>
                             </div>
 
@@ -217,19 +256,6 @@
                 </div>
         </section>
 
-        <section class="about section" id="about">
-            <h2 class="section__title" i18n="about__title">具体原理</h2>
-            <span class="section__subtitle" i18n="about__subtitle">Reason</span>
-            <div class="about__container container grid">
-                <img src="imgs/result.png" alt="" class="about__img" />
-                <div class="about__data">
-                    <p class="about__description" i18n="about__description">
-                        由于化学气相沉淀法生成的碳纳米管簇密度极高，在尖端部分会产生明显的屏蔽效应，影响工质气体的电离。在实验中，未加工的发射极的工质电离率几乎为0，但是破碎的碳纳米管片有更高的电离率。通过Comsol仿真和实物实验，最终确定可以通过遮盖反应点位的方法来有效提高电离率。故作此发明专利。
-                    </p>
-                </div>
-
-            </div>
-        </section>
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
             <h2 class="section__title" i18n="contact__title">Contact me</h2>
