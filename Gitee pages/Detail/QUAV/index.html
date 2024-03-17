@@ -162,6 +162,67 @@
                 </div>
             </div>
         </section>
+        <!--*******************************************************-->
+        <section>
+            <h2 class="section__title" i18n="about__title">写作过程</h2>
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        在经过各种和无人机相关实践活动后，我对无人机燃起了兴趣。在大二分配院士导师后，正好中心有研究无人机的老师，于是我和同学一拍即合便加入了老师的项目组。<br>
+                        在经过调研和探索，我们先以较为简单的<strong>无人机姿态环</strong>作为入手点，进行了一些研究。<br>
+                        对于较为基本的鲁棒控制，核心算法最开始采用的是滑模，但是由于效果一般，最终采用了<strong>反步法</strong>作为核心控制算法。<br>
+                        当然，除了核心控制算法，还有各种方法用于减少通信压力和降低误差。
+                    </p>
+                </div>
+                <div class="about__data">
+                    <iframe src="https://player.bilibili.com/player.html?bvid=BV1Rt421V7MV&high_quality=1"
+                        scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"
+                        style="width: 100%; height: auto;">
+                    </iframe>
+                    <p style="text-align: center;">
+                        通过Airsim来实现基础的无人机控制
+                    </p>
+                </div>
+                <img src="imgs/流程图.png" alt="" class="about__img" />
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        为了降低干扰的影响，我们加入了<strong>干扰观测器</strong><br>
+                        为了进一步降低通信压力，我们采用了<strong>事件触发+量化器</strong><br>
+                        为了约束误差的大小，我们使用了<strong>指定时间预设性能函数</strong><br>
+                        为了解决系统的不确定性，我们使用了<strong>RBFNN</strong><br>
+                    </p>
+                </div>
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        在整体的论文工作中，我负责了全部的simulink和python代码搭建工作</strong>，提出了<strong>全新的对数-均匀滞回量化器</strong>，并完成了80%的理论证明工作。<br>
+                        这段经历提高了我的<strong>文献检索能力</strong>，<strong>理论推导能力</strong>和<strong>编程能力</strong>。让我对未来的科研充满了信心。<br>
+                    </p>
+                </div>
+                <div class="about__data">
+                    <img src="imgs/4w.png" alt="" class="about__img" />
+                    <p style="text-align: center;">
+                        4w组误差仿真测试
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--*******************************************************-->
+        <section>
+            <h2 class="section__title" i18n="about__title">其他工作</h2>
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <p class="about__description" i18n="about__description">
+                        在小修的过程中，我们还对其他算法进行了复现和对比，包括NFFTSMC（非奇异快速固定时间终端滑模控制）和一些用于卫星姿态控制的算法。在小修结束后，我已经完成了仿真的搭建，计划针对卫星进行一些姿态控制的研究。<br>
+                        同时，我已经完成了基础的无人机位置环和编队的Simulink仿真代码，计划在未来进行实机测试。
+                    </p>
+                </div>
+                <div class="about__data">
+                    <img src="imgs/卫星.png" alt="" class="about__img" />
+                    <p style="text-align: center;">
+                        目前已经完成的空间动力卫星姿态控制仿真代码
+                    </p>
+                </div>
+        </section>
         <!--==================== QUALIFICATION ====================-->
         <section class="qualification section">
             <h2 class="section__title" i18n="qualification__title">
