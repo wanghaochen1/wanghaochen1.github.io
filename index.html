@@ -114,10 +114,21 @@
     <script type="text/javascript" src="https://unpkg.com/dmego-home-page@latest/assets/js/main.js"></script>
     <script type="text/javascript" src="./assets/json/images.json?cb=getBingImages"></script>
     <script src="assets/js/click.js"></script>
+
     <script>
-        window.onload = function () {
+        async function hashPassword(password) {
+            const msgUint8 = new TextEncoder().encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        }
+
+        window.onload = async function () {
             var password = prompt("未识别到cookie，请输入32位密钥：");
-            if (password !== "1120210529") { // 将"yourpassword"替换为你的密码
+            var hashedPassword = await hashPassword(password);
+            var correctHashedPassword = "yourhashedpassword"; // 将"yourhashedpassword"替换为你的哈希密码
+            if (hashedPassword !== 'f3577456e873cd363494416f323ebf1a812123755296fa4e5809553525c47063') {
                 window.location.href = "error.html"; // 将这里替换为你的错误页面的URL
             }
         }
