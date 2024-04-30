@@ -15,6 +15,14 @@
     <link rel="stylesheet" type="text/css" href="assets/css/iconfont.css">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" href="favicon.ico">
+    <script>
+        window.onload = function () {
+            var user = '你的邮箱用户名';
+            var domain = '你的邮箱域名';
+            var element = document.querySelector('a[title="这是我的邮箱"]');
+            element.href = 'mailto:' + user + '@' + domain;
+        }
+    </script>
 </head>
 
 <body>
@@ -55,23 +63,31 @@
                         <br />
                         <strong>-「中牟道中」</strong>
                     </p>
+                    <!-- <p class="panel-cover__description iUp">
+                        <br />
+                        <strong>-「中牟道中」</strong>
+                    </p> -->
                     <div class="navigation-wrapper iUp">
                         <div>
                             <nav class="cover-navigation cover-navigation--primary">
                                 <ul class="navigation">
                                     <li class="navigation__item">
-                                        <a href="/" class="blog-button">首页</a>
+                                        <a href="./resume/PPT.pdf" class="blog-button">自我介绍PPT</a>
                                     </li>
+
                                     <li class="navigation__item">
-                                        <a href="responsive-portfolio-website-master/index.html" class="blog-button"
-                                            target="_blank">博客</a>
+                                        <a href="./resume/CVword版本.pdf" class="blog-button" target="_blank">我的简历</a>
                                     </li>
+
                                     <li class="navigation__item">
-                                        <a href="resume/resume.html" class="blog-button" target="_blank">简历</a>
+                                        <a href="Gitee pages/CV.html" class="blog-button" target="_blank">我的交互式简历</a>
                                     </li>
+
                                     <li class="navigation__item">
-                                        <a href="Gitee pages/北京理工大学.html" class="blog-button" target="_blank">关于</a>
+                                        <a href="./responsive-portfolio-website-master/index.html" class="blog-button"
+                                            target="_blank">我的博客</a>
                                     </li>
+
                                 </ul>
                             </nav>
                         </div>
@@ -86,9 +102,8 @@
                                     </li>
                                     <li class="navigation__item">
                                         <!-- 加密的邮箱地址, 请自行修改, 或者改用下方的明文方式 -->
-                                        <!--<a href="javascript:decryptEmail('ZG1lYWdvQGdtYWlsLmNvbQ==');" title="My Email"> -->
-                                        <a href="mailto:wanghaochen001@outlook.com" title="这是我的邮箱">
-                                            <i class='social iconfont icon-email'></i>
+                                        <a href="javascript:decryptEmail('d2FuZ2hhb2NoZW4wMEBvdXRsb29rLmNvbQ==');" title="My Email">
+                                            <i class='social iconfont icon-email' id="email"></i>
                                             <span class="label">email</span>
                                         </a>
                                     </li>
@@ -115,7 +130,7 @@
     <script type="text/javascript" src="./assets/json/images.json?cb=getBingImages"></script>
     <script src="assets/js/click.js"></script>
 
-    <script>
+    <!-- <script>
         async function hashPassword(password) {
             const msgUint8 = new TextEncoder().encode(password);
             const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
@@ -132,7 +147,7 @@
                 window.location.href = "error.html"; // 将这里替换为你的错误页面的URL
             }
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
