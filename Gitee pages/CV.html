@@ -23,6 +23,12 @@
 <link rel="stylesheet" href="css/gb20190805/ieIndex.css">
 <![endif]-->
     <style>
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
         #asideNav {
             position: fixed;
             right: 0px;
@@ -336,14 +342,6 @@
                                 </a>
                             </li>
 
-
-
-
-
-
-
-
-
                         </ul>
                     </div>
                     <ol class="flex-control-nav flex-control-paging">
@@ -364,16 +362,16 @@
             <div class="row mode05 container clearFix">
                 <div class="listTitle listTitle06">
                     <a target="_blank;">
-                        <h2>累计44门课程90+</h2>
+                        <h2>累计44门课程90+<br>细分方向：专业第一</h2>
                     </a>
                 </div>
                 <div class="flexslider">
 
                     <div class="flex-viewport" style="overflow: hidden; position: relative;">
                         <ul class="slides"
-                            style="width: 1800%; transition-duration: 0.6s; transform: translate3d(-222px, 0px, 0px);">
+                            style="width: 1800%; transition-duration: 0.6s; transform: translate3d(-20px, 0px, 0px);">
 
-                            <li style="width: 207.5px; margin-right: 15px; float: left; display: block;" class=""
+                            <li style="width: 200.5px; margin-right: 15px; float: right; display: block;" class=""
                                 data-thumb-alt="">
                                 <div class="bit-data"><span>
                                         <strong class="counter" data-from="0" data-to="580"
@@ -479,10 +477,6 @@
                                         <i></i>
                                     </span></div>
                             </li>
-
-
-
-
 
                         </ul>
                     </div>
@@ -649,6 +643,52 @@
     <script src="chrome-extension://cdnlggbebabeoneeglhadpagegmflmbc/aiscripts/scriptBus.js"></script><span
         id="cnki_grabber" data-id="1709980506000" style="visibility: hidden;"></span>
     <script></script>
+    <canvas id="canvas"></canvas>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        var fireworks = [];
+
+        function Firework(x, y) {
+            this.x = x;
+            this.y = y;
+            this.velY = -1;  // 烟花的垂直速度
+            this.gravity = 0.01;  // 烟花受到的重力
+            this.alpha = 1;  // 烟花的透明度
+
+            this.draw = function () {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 10, 0, Math.PI * 2);
+                ctx.fillStyle = "rgba(255, 255, 255, " + this.alpha + ")";
+                ctx.fill();
+            };
+
+            this.update = function () {
+                this.y += this.velY;
+                this.velY += this.gravity;
+                this.alpha -= 0.01;  // 烟花逐渐消失
+            };
+        }
+
+        canvas.addEventListener('click', function (e) {
+            fireworks.push(new Firework(e.x, e.y));
+        });
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            fireworks.forEach(function (firework) {
+                firework.update();
+                firework.draw();
+            });
+            requestAnimationFrame(animate);  // 添加这一行
+        }
+
+        animate();  // 开始动画
+    </script>
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
         <style>
             div.grammarly-desktop-integration {
