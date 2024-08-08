@@ -149,7 +149,10 @@ img {
 
 .section__title {
     font-size: var(--h1-font-size);
-    color: var(--title-color);
+    color: rgb(247, 236, 236);
+    background-color: rgba(5, 5, 5, 0.257);
+    padding: 20px;
+    border-radius: 10px; /* 添加这里 */
 }
 
 .section__subtitle {
@@ -161,6 +164,7 @@ img {
 .section__title,
 .section__subtitle {
     text-align: center;
+    color:rgb(247, 244, 244)
 }
 
 /*==================== LAYOUT ====================*/
@@ -336,17 +340,22 @@ img {
 
 .home__title {
     font-size: var(--big-font-size);
+    color: rgb(247, 244, 244);
 }
 
 .home__subtitle {
     font-size: var(--h3-font-size);
-    color: var(--text-color);
+    color: white;
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-75);
 }
 
 .home__description {
     margin-bottom: var(--mb-2);
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.288);
+    padding: 10px;
+    border-radius: 10px; /* 添加这里 */
 }
 
 /* .home__scroll {
@@ -434,9 +443,12 @@ img {
 }
 
 .about__description {
+    color:rgb(255, 255, 255);
     text-align: center;
     margin-bottom: var(--mb-2-5);
-
+    background-color: rgba(1, 40, 76, 0.599);
+    padding: 10px;
+    border-radius: 10px; /* 添加这里 */
 }
 
 .about__info {
@@ -747,8 +759,8 @@ img {
 }
 
 .contact__subtitle {
+    color: rgb(255, 255, 255);
     font-size: var(--small-font-size);
-    color: var(--text-color-light);
 }
 
 .contact__content {

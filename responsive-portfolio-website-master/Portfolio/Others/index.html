@@ -22,10 +22,12 @@
 </head>
 
 <body>
+    <iframe src="BackGround.html"
+        style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:-5;"></iframe>
     <!--==================== HEADER ====================-->
     <header class="header scroll-header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">ASOUTHERNCAT</a>
+            <a href="#" class="nav__logo">My Repo</a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
@@ -81,185 +83,180 @@
     </header>
 
     <!--==================== MAIN ====================-->
-    <main class="main"
-        style="background-image: url('imgs/th.jfif'); background-attachment: fixed; background-size: 1500px 900px;">
-        <!--==================== HOME ====================-->
-        <section class="home section" id="home">
-            <div class="home__container container grid">
-                <div class="home__content grid">
-                    <div class="home__social">
-                        <a href="https://github.com/wanghaochen1?tab=repositories" target="_blank"
-                            class="home__social-icon">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <rect width="400" height="400" fill="url(#pattern)" />
-                            <defs>
-                                <pattern id="pattern" patternUnits="userSpaceOnUse" width="200" height="187">
-                                    <image class="home__blob-img" x="0" y="20" xlink:href="imgs/C4D.png" width="150"
-                                        height="150" />
-                                </pattern>
-                            </defs>
-                        </svg>
-                    </div>
-
-                    <div class="home__data">
-                        <h1 class="home__title" i18n="home__title">
-                            我的代码+模型+动画空间
-                        </h1>
-                        <h3 class="home__subtitle" id="date" i18n="home__subtitle"></h3>
-                        <p class="home__description" i18n="home__description">
-                            本部分存放我课程，竞赛和课余时间完成的项目。欢迎交流和指导。😀
-                        </p>
-                        <a href="#contact" class="button button-flex">
-                            <span i18n="home__contact">Contact Me</span>
-                            <i class="uil uil-message button__icon"></i>
-                        </a>
-                    </div>
+    <main class="main"></main>
+    <!-- style="background-image: url('imgs/th.jfif'); background-attachment: fixed; background-size: 1500px 900px;" -->
+    <!--==================== HOME ====================-->
+    <section class="home section" id="home">
+        <div class="home__container container grid">
+            <div class="home__content grid">
+                <div class="home__social">
+                    <a href="https://github.com/wanghaochen1?tab=repositories" target="_blank"
+                        class="home__social-icon">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
                 </div>
-                <div class="home__scroll">
-                    <a href="#about" class="home__scroll-button button--flex">
-                        <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
-                        <span class="home__scroll-name" i18n="home__scroll-name">Scroll down to find more</span>
-                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="400" height="400" fill="url(#pattern)" />
+                        <defs>
+                            <pattern id="pattern" patternUnits="userSpaceOnUse" width="200" height="187">
+                                <image class="home__blob-img" x="0" y="20" xlink:href="imgs/C4D.png" width="150"
+                                    height="150" />
+                            </pattern>
+                        </defs>
+                    </svg>
+                </div>
+
+                <div class="home__data">
+                    <h1 class="home__title" i18n="home__title">
+                        我的代码+模型+动画空间
+                    </h1>
+                    <h3 class="home__subtitle" id="date" i18n="home__subtitle"></h3>
+                    <p class="home__description" i18n="home__description">
+                        本部分存放我课程，竞赛和课余时间完成的项目。欢迎交流和指导。😀
+                    </p>
+                    <a href="#contact" class="button button-flex">
+                        <span i18n="home__contact">Contact Me</span>
+                        <i class="uil uil-message button__icon"></i>
                     </a>
                 </div>
             </div>
-        </section>
+            <div class="home__scroll">
+                <a href="#about" class="home__scroll-button button--flex">
+                    <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
+                    <span class="home__scroll-name" i18n="home__scroll-name">Scroll down to find more</span>
+                    <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <!--==================== ABOUT ====================-->
-        <section class="about section" id="about">
-            <h2 class="section__title" i18n="about__title">机械工程创新创意大赛</h2>
-            <span class="section__subtitle" i18n="about__subtitle">2022-12-6</span>
-            <div class="about__container container grid">
-                <img src="imgs/machine.png" alt="" class="about__img" />
-                <div class="about__data">
-                    <p class="about__description" i18n="about__description"
-                        style="background-color: #f5f3e6; padding: 10px; border: 2px solid #c2e5af; border-radius: 10px;">
-                        刚刚大二的我自学三维建模软件，带领同学设计了微型草莓采摘机器人。一步步优化，斩获<strong>最年轻的全国一等奖</strong>。作为组长，我负责机器人零件设计，建模，装配和分析，制作了机器人工作动画并进行了有限元分析和拓扑优化。这次比赛让我对机械设计有了更深的理解，也让我对自己的未来有了更多的期待
-                    </p>
-                    </p>
-                    <div class="about__buttons">
-                        <a download="" href="file/Machine.pdf" class="button button--flex">
-                            <span i18n="download">Download This Certificate</span><i
-                                class="uil uil-download-alt button__icon"></i>
-                        </a>
+    <!--==================== ABOUT ====================-->
+    <section class="about section" id="about">
+        <h2 class="section__title" i18n="about__title">机械工程创新创意大赛</h2>
+        <span class="section__subtitle" i18n="about__subtitle">2022-12-6</span>
+        <div class="about__container container grid">
+            <img src="imgs/machine.png" alt="" class="about__img" />
+            <div class="about__data">
+                <p class="about__description" i18n="about__description">
+                    刚刚大二的我自学三维建模软件，带领同学设计了微型草莓采摘机器人。一步步优化，斩获<strong>最年轻的全国一等奖</strong>。作为组长，我负责机器人零件设计，建模，装配和分析，制作了机器人工作动画并进行了有限元分析和拓扑优化。这次比赛让我对机械设计有了更深的理解，也让我对自己的未来有了更多的期待
+                </p>
+                </p>
+                <div class="about__buttons">
+                    <a download="" href="file/Machine.pdf" class="button button--flex">
+                        <span i18n="download">Download This Certificate</span><i
+                            class="uil uil-download-alt button__icon"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--第二个项目-->
+    <section class="about section" id="Rec">
+        <h2 class="section__title" i18n="about__title">人脸识别签到系统</h2>
+        <span class="section__subtitle" i18n="about__subtitle">On github</span>
+        <div class="about__container container grid">
+            <img src="imgs/Sign.png" height="100" alt="" class="about__img" />
+            <div class="about__data">
+                <p class="about__description" i18n="about__description">
+                    在计算机网络课程设计中，设计了基于opencv的人脸识别签到系统，配合Socket协议，实现了远程签到功能。同时基于LSTM对学生签到时间进行预测，并通过邮件提醒学生。通过消息队列解决高并发问题，斩获课程最高分数。此项目是我第一次尝试使用Python进行项目开发。
+                </p>
+                <div class="about__buttons">
+                    <a download="" href="https://github.com/wanghaochen1/BIT-Sign-System" class="button button--flex">
+                        <span i18n="download">Download This Project on Github</span><i
+                            class="uil uil-download-alt button__icon"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--第3个项目-->
+    <section class="about section" id="C4D">
+        <h2 class="section__title" i18n="about__title">我的C4D作品</h2>
+        <span class="section__subtitle" i18n="about__subtitle">课余生活</span>
+        <div class="about__container container grid">
+            <video width="320" height="240" controls>
+                <source src="imgs/C4D.mp4" type="video/mp4">
+            </video>
+            <video width="320" height="240" controls>
+                <source src="imgs/Star.mp4" type="video/mp4">
+            </video>
+            <video width="400" height="240" controls>
+                <source src="imgs/C4D2.mp4" type="video/mp4">
+            </video>
+            <div class="about__data">
+                <p class="about__description" i18n="about__description">
+                    在假期中，我自学了C4D,制作了一些简单的动画和视频。这些作品都是我自己设计的，包括了一些简单的建模，材质，灯光，动画和特效。在互联网+的比赛中，我奉命于危难之间，为团队渲染了工作原理动画，最终队伍斩获北京市一等奖。
+                </p>
+                <div class="about__buttons">
+                    <a download="" href="imgs/C4D.mp4" class="button button--flex">
+                        <span i18n="download">Download This Video</span><i
+                            class="uil uil-download-alt button__icon"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--==================== 国创介绍 ====================-->
+    <section class="about section" id="国创">
+        <h2 class="section__title" i18n="about__title">国家级大创</h2>
+        <span class="section__subtitle" i18n="about__subtitle">湿粘附材料的机理和应用研究</span>
+        <div class="about__container container grid">
+            <img src="imgs/湿粘附.png" alt="" class="about__img" />
+            <img src="imgs/肠胃机器人.png" alt="" class="about__img" />
+            <div class="about__data">
+                <p class="about__description" i18n="about__description">
+                    我作为<strong>项目负责人</strong>，带领团队进行了湿粘附材料的机理和应用研究。在项目中，我负责了材料的制备，表征和应用研究。并通过对材料的表征，优化了湿粘附材料，并在医疗器械上进行了应用研究。设计出基于仿生湿粘附材料的肠胃机器人，并针对性优化了通信负担和控制算法。该项目也顺利在挑战杯中斩获<strong>省部级一等奖</strong>。
+            </div>
+            <img src="imgs/国创.png" alt="" class="about__img" />
+        </div>
+    </section>
+    <!--==================== CONTACT ME ====================-->
+    <section class="contact section" id="contact">
+        <h2 class="section__title" i18n="contact__title">Contact me</h2>
+        <span class="section__subtitle" i18n="contact__subtitle">Get in touch</span>
+
+        <div class="contact__container container grid">
+            <div>
+                <div class="contact__information">
+                    <i class="uil uil-phone-alt contact__icon"></i>
+
+                    <div>
+                        <h3 class="contact__title" i18n="tel">Contact me (WeChat)</h3>
+                        <span class="contact__subtitle" i18n="tel__number">wanghaocheniam</span>
                     </div>
                 </div>
 
-            </div>
+                <div class="contact__information">
+                    <i class="uil uil-envelope contact__icon"></i>
 
-        </section>
-        <!--第二个项目-->
-        <section class="about section" id="Rec">
-            <h2 class="section__title" i18n="about__title">人脸识别签到系统</h2>
-            <span class="section__subtitle" i18n="about__subtitle">On github</span>
-            <div class="about__container container grid">
-                <img src="imgs/Sign.png" height="100" alt="" class="about__img" />
-                <div class="about__data">
-                    <p class="about__description" i18n="about__description"
-                        style="background-color: #f5f3e6; padding: 10px; border: 2px solid #c2e5af; border-radius: 10px;">
-                        在计算机网络课程设计中，设计了基于opencv的人脸识别签到系统，配合Socket协议，实现了远程签到功能。同时基于LSTM对学生签到时间进行预测，并通过邮件提醒学生。通过消息队列解决高并发问题，斩获课程最高分数。此项目是我第一次尝试使用Python进行项目开发。
-                    </p>
-                    <div class="about__buttons">
-                        <a download="" href="https://github.com/wanghaochen1/BIT-Sign-System"
-                            class="button button--flex">
-                            <span i18n="download">Download This Project on Github</span><i
-                                class="uil uil-download-alt button__icon"></i>
-                        </a>
+                    <div>
+                        <h3 class="contact__title" i18n="email">E-mail</h3>
+                        <span class="contact__subtitle" i18n="email__address">wanghaochen001@outlook.com</span>
                     </div>
                 </div>
 
-            </div>
-        </section>
-        <!--第3个项目-->
-        <section class="about section" id="C4D">
-            <h2 class="section__title" i18n="about__title">我的C4D作品</h2>
-            <span class="section__subtitle" i18n="about__subtitle">课余生活</span>
-            <div class="about__container container grid">
-                <video width="320" height="240" controls>
-                    <source src="imgs/C4D.mp4" type="video/mp4">
-                </video>
-                <video width="320" height="240" controls>
-                    <source src="imgs/Star.mp4" type="video/mp4">
-                </video>
-                <video width="400" height="240" controls>
-                    <source src="imgs/C4D2.mp4" type="video/mp4">
-                </video>
-                <div class="about__data">
-                    <p class="about__description" i18n="about__description"
-                        style="background-color: #f5f3e6; padding: 10px; border: 2px solid #c2e5af; border-radius: 10px;">
-                        在假期中，我自学了C4D,制作了一些简单的动画和视频。这些作品都是我自己设计的，包括了一些简单的建模，材质，灯光，动画和特效。在互联网+的比赛中，我奉命于危难之间，为团队渲染了工作原理动画，最终队伍斩获北京市一等奖。
-                    </p>
-                    <div class="about__buttons">
-                        <a download="" href="imgs/C4D.mp4" class="button button--flex">
-                            <span i18n="download">Download This Video</span><i
-                                class="uil uil-download-alt button__icon"></i>
-                        </a>
-                    </div>
-                </div>
+                <div class="contact__information">
+                    <i class="uil uil-map-marker contact__icon"></i>
 
-            </div>
-        </section>
-        <!--==================== 国创介绍 ====================-->
-        <section class="about section" id="国创">
-            <h2 class="section__title" i18n="about__title">国家级大创</h2>
-            <span class="section__subtitle" i18n="about__subtitle">湿粘附材料的机理和应用研究</span>
-            <div class="about__container container grid">
-                <img src="imgs/湿粘附.png" alt="" class="about__img" />
-                <img src="imgs/肠胃机器人.png" alt="" class="about__img" />
-                <div class="about__data">
-                    <p class="about__description" i18n="about__description"
-                        style="background-color: #f5f3e6; padding: 10px; border: 2px solid #c2e5af; border-radius: 10px;">
-                        我作为<strong>项目负责人</strong>，带领团队进行了湿粘附材料的机理和应用研究。在项目中，我负责了材料的制备，表征和应用研究。并通过对材料的表征，优化了湿粘附材料，并在医疗器械上进行了应用研究。设计出基于仿生湿粘附材料的肠胃机器人，并针对性优化了通信负担和控制算法。该项目也顺利在挑战杯中斩获<strong>省部级一等奖</strong>。
-                </div>
-                <img src="imgs/国创.png" alt="" class="about__img" />
-            </div>
-        </section>
-        <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title" i18n="contact__title">Contact me</h2>
-            <span class="section__subtitle" i18n="contact__subtitle">Get in touch</span>
-
-            <div class="contact__container container grid">
-                <div>
-                    <div class="contact__information">
-                        <i class="uil uil-phone-alt contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title" i18n="tel">Contact me (WeChat)</h3>
-                            <span class="contact__subtitle" i18n="tel__number">wanghaocheniam</span>
-                        </div>
-                    </div>
-
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title" i18n="email">E-mail</h3>
-                            <span class="contatc__subtitle" i18n="email__address">wanghaochen001@outlook.com</span>
-                        </div>
-                    </div>
-
-                    <div class="contact__information">
-                        <i class="uil uil-map-marker contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title" i18n="location">Location</h3>
-                            <span class="contatc__subtitle" i18n="location__detail">BeiJing , CHN</span>
-                        </div>
+                    <div>
+                        <h3 class="contact__title" i18n="location">Location</h3>
+                        <span class="contact__subtitle" i18n="location__detail">BeiJing , CHN</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
@@ -293,7 +290,7 @@
                 <a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank">Bedimcode</a>
             </p>
         </div>
-    </footer>
+    </footer> -->
 
     <!--==================== SCROLL TOP ====================-->
     <a href="#" class="scrollup" id="scroll-up">
