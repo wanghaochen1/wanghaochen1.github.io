@@ -19,7 +19,7 @@
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
     --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --body-color: rgb(40, 40, 40);
     --container-color: hsl(var(--hue-color), 100%, 98%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
@@ -74,7 +74,7 @@
 body.dark-theme {
     /* HSL color mode */
     --first-color-second: hsl(var(--hue-color), 30%, 8%);
-    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --title-color: white;
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 75%);
     --input-color: hsl(var(--hue-color), 29%, 16%);
@@ -149,7 +149,10 @@ img {
 
 .section__title {
     font-size: var(--h1-font-size);
-    color: var(--title-color);
+    color: rgb(247, 236, 236);
+    background-color: rgba(255, 255, 255, 0.257);
+    padding: 20px;
+    border-radius: 10px; /* 添加这里 */
 }
 
 .section__subtitle {
@@ -161,6 +164,7 @@ img {
 .section__title,
 .section__subtitle {
     text-align: center;
+    color:rgb(247, 244, 244)
 }
 
 /*==================== LAYOUT ====================*/
@@ -224,6 +228,7 @@ img {
         box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
+
     }
 }
 
@@ -234,6 +239,7 @@ img {
 
 .nav__item {
     align-items: center;
+    color: #FFF;
 }
 
 .nav__link {
@@ -257,6 +263,7 @@ img {
 
 .nav__icon {
     font-size: 1.2rem;
+    color: white;
 }
 
 .nav__icon-svg {
@@ -336,17 +343,22 @@ img {
 
 .home__title {
     font-size: var(--big-font-size);
+    color: rgb(247, 244, 244);
 }
 
 .home__subtitle {
     font-size: var(--h3-font-size);
-    color: var(--text-color);
+    color: white;
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-75);
 }
 
 .home__description {
     margin-bottom: var(--mb-2);
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.288);
+    padding: 10px;
+    border-radius: 10px; /* 添加这里 */
 }
 
 /* .home__scroll {
@@ -370,7 +382,7 @@ img {
 
 .home__scroll-name {
     font-size: var(--small-font-size);
-    color: var(--title-color);
+    color: white;
     font-weight: var(--font-medium);
     margin-right: var(--mb-0-25);
 
@@ -434,9 +446,12 @@ img {
 }
 
 .about__description {
+    color:rgb(255, 255, 255);
     text-align: center;
     margin-bottom: var(--mb-2-5);
-
+    background-color: rgba(1, 40, 76, 0.599);
+    padding: 10px;
+    border-radius: 10px; /* 添加这里 */
 }
 
 .about__info {
@@ -448,12 +463,12 @@ img {
 .about__info-title {
     font-size: var(--h2-font-size);
     font-weight: var(--font-semi-bold);
-    color: var(--title-color);
+    color: white;
 }
 
 .about__info-name {
     font-size: var(--smaller-font-size);
-
+    color: white;
 }
 
 .about__info-title,
@@ -494,6 +509,7 @@ img {
 
 .skills__title {
     font-size: var(--h3-font-size);
+    color: #FFF;
 }
 
 .skills__subtitle {
@@ -523,6 +539,7 @@ img {
 .skills__name {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
+    color: white;
 }
 
 .skills__bar,
@@ -613,6 +630,7 @@ img {
 .qualification__title {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
+    color: #FFF;
 }
 
 .qualification__subtitle {
@@ -682,10 +700,12 @@ img {
 .portfolio__title {
     font-size: var(--h3-font-size);
     margin-bottom: var(--mb-0-5);
+    color: #FFF;
 }
 
 .portfolio__description {
     margin-bottom: var(--mb-0-75);
+    color: #FFF
 }
 
 .portfolio__button:hover .button__icon {
@@ -747,8 +767,8 @@ img {
 }
 
 .contact__subtitle {
+    color: rgb(255, 255, 255);
     font-size: var(--small-font-size);
-    color: var(--text-color-light);
 }
 
 .contact__content {
@@ -1214,4 +1234,11 @@ img {
     .contact__inputs {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+.nav__link span {
+    background-color: #dbdace;
+    /* 你可以选择任何你喜欢的颜色 */
+    padding: 5px;
+    /* 调整这个值可以改变背景框的大小 */
 }
