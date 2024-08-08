@@ -235,6 +235,7 @@ img {
 .nav__list {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    color:white
 }
 
 .nav__item {
@@ -1049,6 +1050,7 @@ img {
             align-content: center;
             display: flex;
             flex-wrap: wrap;
+            color: #FFF;
         }
 
         #translate {
