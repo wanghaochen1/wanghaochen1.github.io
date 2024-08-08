@@ -360,16 +360,6 @@ html[xmlns] .slides {
 }
 
 .wrap_mode01 {
-    background: #1e2153;
-    background: -webkit-linear-gradient(left, #1e2153, #2d4882, #192b4d);
-    /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right, #1e2153, #2d4882, #192b4d);
-    /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right, #1e2153, #2d4882, #192b4d);
-    /* Firefox 3.6 - 15 */
-    background: linear-gradient(to right, #1e2153, #2d4882, #192b4d);
-    /* 标准的语法 */
-    ;
     position: relative;
 }
 
